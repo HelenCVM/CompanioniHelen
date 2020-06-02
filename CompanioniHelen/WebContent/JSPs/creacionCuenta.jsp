@@ -19,33 +19,42 @@
     </div>
     
     <div class="form-group">
-    <label >Cedula:</label>
-    <input class="form-control" type="number" minlength="10" maxlength="10" placeholder="0161489812" name="cedula"  required>
+    <label >Fecha:</label>
+    <input class="form-control" type="text" minlength="10" maxlength="10" name="fecha"  required>
+    </div>
+    
+    <div class="form-group">
+    <label >Cliente:</label>
+	<input class="form-control" type="text" name="cliente"   required>
+	</div>
+	
+	 <div class="form-group">
+	<label >Observaciones:</label>
+    <input class="form-control" type="text" name="observaciones"  required>
+     </div>
+
+
+<div class="form-group">
+     <h1 style="color:black;font-family: verdana;text-align:center;border: 1px solid black;">Ingresar Comida</h1>
     </div>
     
     <div class="form-group">
     <label >Nombre:</label>
-	<input class="form-control" type="text" name="nombre" placeholder="Juan" required pattern="[A-Za-z]+" required>
+    <input class="form-control" type="text" minlength="10" maxlength="10" name="nombre"  required>
+    </div>
+    
+    <div class="form-group">
+    <label >Precio Unitario:</label>
+	<input class="form-control" type="text" name="precio"   required>
 	</div>
 	
-	 <div class="form-group">
-	<label >Apellido:</label>
-    <input class="form-control" type="text" name="apellido" placeholder="Perez" required pattern="[A-Za-z]+" required>
-     </div>
-     
-    <div class="form-group">
-    <label >Correo:</label>
-    <input class="form-control" type="email" name="correo" placeholder="example@gmail.com" required>
-    </div> 
-  
-   <div class="form-group">
-    <label >Contraseña:</label>
-    <input class="form-control" type="password" name="contrasena" required>
-   </div> 
-   
 	<input  class="btn btn-info btn-block" type="submit" value="Enviar">
 
 </form>
+
+<p style="color:black;font-family:verdana;text-align:center;"><a href="http://localhost:8082/JPAProyecto/JSPs/registrar.jsp">1#Ingresar mas Comida</a><p>
+
+
 
 </div>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
