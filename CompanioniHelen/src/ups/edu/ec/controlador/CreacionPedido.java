@@ -56,6 +56,7 @@ public class CreacionPedido extends HttpServlet {
 		pe.setFecha(fecha);
 		pe.setCliente(cliente);
 		pe.setObservaciones(observaciones);
+
 		
 		Comida co=new Comida();
 		co.setNombre(nombre);
@@ -67,12 +68,13 @@ public class CreacionPedido extends HttpServlet {
 		tar.setFechacadu(fechcadu);
 		tar.setCvv(cvv);
 		
+		pe.setTarjeta(tar);
+		pedidoDAO.create(pe);
+		comidaDAO.create(co);
+		tarjetaDAO.create(tar);
 		
-		
-		System.out.println("Creando entidades");
-	    em.getTransaction().begin();
-	    em.persist(pe);
-	    em.getTransaction().commit();
+		request.getRequestDispatcher("/JSPs/creacionCuenta.jsp").forward(request,  response);
+
 	}
 
 	/**
