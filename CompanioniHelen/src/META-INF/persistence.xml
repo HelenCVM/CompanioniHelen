@@ -9,7 +9,6 @@
 	<class>ups.edu.ec.modelo.Pedido</class>
 	<class>ups.edu.ec.modelo.Comida</class>
 	<class>ups.edu.ec.modelo.TarjetaCredito</class>
-	   
     <properties>
 		<property name="eclipselink.ddl-generation" value="none"/>
 		<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/examen"/>
