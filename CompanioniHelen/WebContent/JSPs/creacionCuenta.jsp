@@ -13,7 +13,7 @@
 </head>
 <body style="background-color:powderblue;">
 <div class="container col-lg-3">
- <form action="/JPAProyecto/CreacionCuenta" style="padding: 30px;margin-top:20px;">
+ <form action="/CompanioniHelen/CreacionPedido" style="padding: 30px;margin-top:20px;">
    <div class="form-group">
      <h1 style="color:black;font-family: verdana;text-align:center;border: 1px solid black;">Realizar Pedido</h1>
     </div>
@@ -34,7 +34,7 @@
      </div>
 
 
-<div class="form-group">
+   <div class="form-group">
      <h1 style="color:black;font-family: verdana;text-align:center;border: 1px solid black;">Ingresar Comida</h1>
     </div>
     
@@ -46,6 +46,31 @@
     <div class="form-group">
     <label >Precio Unitario:</label>
 	<input class="form-control" type="text" name="precio"   required>
+	</div>
+	
+	
+    <div class="form-group">
+     <h1 style="color:black;font-family: verdana;text-align:center;border: 1px solid black;">Ingresar Tarjeta Credito</h1>
+    </div>
+    
+    <div class="form-group">
+    <label >Numero de tarjeta:</label>
+    <input class="form-control" type="text" minlength="10" maxlength="10" name="numero"  required>
+    </div>
+    
+    <div class="form-group">
+    <label >Nombre:</label>
+	<input class="form-control" type="text" name="nom"   required>
+	</div>
+	
+	<div class="form-group">
+    <label >Fecha de Caducidad:</label>
+	<input class="form-control" type="text" name="fechcadu"   required>
+	</div>
+	
+	<div class="form-group">
+    <label >cvv:</label>
+	<input class="form-control" type="text" name="cvv"   required>
 	</div>
 	
 	<input  class="btn btn-info btn-block" type="submit" value="Enviar">

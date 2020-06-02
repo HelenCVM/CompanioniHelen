@@ -12,5 +12,7 @@ public abstract class DAOFactory {
 	    public abstract PedidoDAO getPedidoDAO();
 	    
 	    public abstract ComidaDAO getComidaDAO();
+	    
+	    public abstract TarjetaDAO getTarjetaDAO();
 }
 

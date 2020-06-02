@@ -17,6 +17,8 @@ public class TarjetaCredito implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
     @Id 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int cod;
     private String numero;
     private String nombre;
     private String fechacadu;
@@ -32,13 +34,29 @@ public class TarjetaCredito implements Serializable {
 
 
 
-	public TarjetaCredito(String numero, String nombre, String fechacadu, String cvv) {
+	public int getCod() {
+		return cod;
+	}
+
+
+
+	public void setCod(int cod) {
+		this.cod = cod;
+	}
+
+
+
+	public TarjetaCredito(int cod, String numero, String nombre, String fechacadu, String cvv, Set<Pedido> pedidos) {
 		super();
+		this.cod = cod;
 		this.numero = numero;
 		this.nombre = nombre;
 		this.fechacadu = fechacadu;
 		this.cvv = cvv;
+		this.pedidos = pedidos;
 	}
+
+
 
 
 
@@ -46,6 +64,7 @@ public class TarjetaCredito implements Serializable {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + cod;
 		result = prime * result + ((cvv == null) ? 0 : cvv.hashCode());
 		result = prime * result + ((fechacadu == null) ? 0 : fechacadu.hashCode());
 		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
@@ -65,6 +84,8 @@ public class TarjetaCredito implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		TarjetaCredito other = (TarjetaCredito) obj;
+		if (cod != other.cod)
+			return false;
 		if (cvv == null) {
 			if (other.cvv != null)
 				return false;
@@ -145,8 +166,8 @@ public class TarjetaCredito implements Serializable {
 
 	@Override
 	public String toString() {
-		return "TarjetaCredito [numero=" + numero + ", nombre=" + nombre + ", fechacadu=" + fechacadu + ", cvv=" + cvv
-				+ "]";
+		return "TarjetaCredito [cod=" + cod + ", numero=" + numero + ", nombre=" + nombre + ", fechacadu=" + fechacadu
+				+ ", cvv=" + cvv + ", pedidos=" + pedidos + "]";
 	}
    
 	
